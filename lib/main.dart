@@ -11,11 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(appBar: AppBar(
       title: Text('My First App'),
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.lightGreenAccent,
     ),
-    
-    
-
-    );
+    body: Container(child: Text('Hye Abhay'),),
+     );
   }
 }
