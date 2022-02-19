@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myfirstapp/img_screen.dart';
+import 'package:myfirstapp/list_data.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -16,9 +17,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(appBar: AppBar(
-      title:const Center(child: Text('My First App')),
+      title: const Center(child: Text('My First App')),
       backgroundColor: Colors.lightGreenAccent,
-      leading:const Icon(Icons.menu),
+      leading: const Icon(Icons.menu),
       actions: [InkWell(child: const Icon(Icons.settings),onTap: (){},)],
 
     ),
@@ -26,7 +27,9 @@ class MyApp extends StatelessWidget {
       children: [
         ElevatedButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) =>const SndScr(),));}, child: const Text('SndScreen')),
       ElevatedButton(onPressed: (){Navigator.pushNamed(context, '/thd');}, child: const Text('Go Third')),
-       ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/imgscr');}, child: const Text('Image Lauch')),],
+       ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/imgscr');}, child: const Text('Image Launch')),
+        ElevatedButton(onPressed: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=> ListData(),));}, child: const Text('Listview Launch')),
+       ],
     ),)
      );
   }
