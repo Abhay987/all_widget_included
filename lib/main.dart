@@ -7,6 +7,7 @@ import 'package:myfirstapp/img_screen.dart';
 import 'package:myfirstapp/list_data.dart';
 import 'package:myfirstapp/row_column.dart';
 import 'package:myfirstapp/stack_layout.dart';
+import 'package:myfirstapp/wrap_data.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -19,6 +20,7 @@ void main() {
         '/rowcol':(context) =>  const RowColumn(),
         '/stackdata':(context)=> const StackData(),
         '/carddata':(context) => const CardData(),
+        '/wrapdata':(context) => const WrapData(),
         
                 
       },));
@@ -45,6 +47,8 @@ class MyApp extends StatelessWidget {
         ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/rowcol');}, child: const Text('Row&Column Launch')),
          ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/stackdata');}, child: const Text('Stack Launch')),
           ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/carddata');}, child: const Text('Card Launch')),
+          ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/wrapdata');}, child: const Text('Wrap Launch')),
+       
        ],
     ),)
      );
