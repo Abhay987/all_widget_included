@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:myfirstapp/card_data.dart';
 import 'package:myfirstapp/grid_data.dart';
 import 'package:myfirstapp/img_screen.dart';
 import 'package:myfirstapp/list_data.dart';
@@ -17,6 +18,7 @@ void main() {
         '/gridscr':(context) =>  GridData(),
         '/rowcol':(context) =>  const RowColumn(),
         '/stackdata':(context)=> const StackData(),
+        '/carddata':(context) => const CardData(),
         
                 
       },));
@@ -42,6 +44,7 @@ class MyApp extends StatelessWidget {
         ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/gridscr');}, child: const Text('Grid Launch')),
         ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/rowcol');}, child: const Text('Row&Column Launch')),
          ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/stackdata');}, child: const Text('Stack Launch')),
+          ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/carddata');}, child: const Text('Card Launch')),
        ],
     ),)
      );
