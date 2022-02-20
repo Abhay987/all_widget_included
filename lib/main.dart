@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:myfirstapp/btmnvr_data.dart';
 import 'package:myfirstapp/card_data.dart';
 import 'package:myfirstapp/grid_data.dart';
 import 'package:myfirstapp/img_screen.dart';
@@ -23,7 +24,7 @@ void main() {
         '/carddata':(context) => const CardData(),
         '/wrapdata':(context) => const WrapData(),
         '/stfldata':(context) => const StflData(),
-        
+        '/btmnvbr':(context) => const BtmNvr(),
         
                 
       },));
@@ -52,7 +53,7 @@ class MyApp extends StatelessWidget {
           ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/carddata');}, child: const Text('Card Launch')),
           ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/wrapdata');}, child: const Text('Wrap Launch')),
           ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/stfldata');}, child: const Text('StatefulWidgt Launch')),
-          
+          ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/btmnvbr');}, child: const Text('btmnvbr Launch')),
        
        ],
     ),)
