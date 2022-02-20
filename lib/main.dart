@@ -1,8 +1,11 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:myfirstapp/grid_data.dart';
 import 'package:myfirstapp/img_screen.dart';
 import 'package:myfirstapp/list_data.dart';
 import 'package:myfirstapp/row_column.dart';
+import 'package:myfirstapp/stack_layout.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -13,6 +16,8 @@ void main() {
         '/imgscr':(context) => const ImgScr(),
         '/gridscr':(context) =>  GridData(),
         '/rowcol':(context) =>  const RowColumn(),
+        '/stackdata':(context)=> const StackData(),
+        
                 
       },));
 }
@@ -36,7 +41,7 @@ class MyApp extends StatelessWidget {
         ElevatedButton(onPressed: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=> ListData(),));}, child: const Text('Listview Launch')),
         ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/gridscr');}, child: const Text('Grid Launch')),
         ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/rowcol');}, child: const Text('Row&Column Launch')),
-        
+         ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/stackdata');}, child: const Text('Stack Launch')),
        ],
     ),)
      );
