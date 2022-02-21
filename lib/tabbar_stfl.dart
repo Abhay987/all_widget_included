@@ -1,15 +1,34 @@
 import 'package:flutter/material.dart';
-class TabData extends StatelessWidget {
-  const TabData({ Key? key }) : super(key: key);
+class TabStfl extends StatefulWidget {
+  const TabStfl({ Key? key }) : super(key: key);
 
+  @override
+  _TabStflState createState() => _TabStflState();
+}
+
+class _TabStflState extends State<TabStfl> with SingleTickerProviderStateMixin {
+    late TabController _tabController;
+    
+    @override
+  void initState() {   
+    super.initState();
+    _tabController=TabController(length: 3, vsync: this);
+    _tabController.addListener(() {
+      //event logic
+    });
+      }
+      @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: DefaultTabController(length: 3,
-       child: Scaffold(
-         appBar: AppBar(
-           title: const Text('Tabbar Screen'),
-           bottom:  TabBar(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Tabbar Screen 2'),
+          bottom: TabBar(
              indicatorColor: Colors.redAccent,
           // indicatorSize: TabBarIndicatorSize.label,
         //  isScrollable: true,
@@ -19,8 +38,9 @@ class TabData extends StatelessWidget {
            borderRadius: BorderRadius.circular(80),
            color: Colors.lightGreen,
           ),
-             tabs: const [
-             Tab(
+            controller: _tabController,
+            tabs:const [
+                 Tab(
                icon: Icon(Icons.directions_bus),
               text: 'Bus',
              ),
@@ -32,9 +52,10 @@ class TabData extends StatelessWidget {
                   icon: Icon(Icons.directions_bike),
               text: 'Bike',
              ),
-           ]),
-         ),
-         body: TabBarView(children: [
+          ]),
+        ),
+        body:  TabBarView(controller: _tabController,
+          children: [
             Container(
               color: Colors.lightBlueAccent,
               child: const Center(
@@ -49,8 +70,7 @@ class TabData extends StatelessWidget {
               child: Text('Bike'),)),
             
          ]),
-         )
-         ),
+      ),
     );
   }
 }

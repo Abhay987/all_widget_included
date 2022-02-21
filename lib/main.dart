@@ -13,6 +13,7 @@ import 'package:myfirstapp/rtert.dart';
 import 'package:myfirstapp/stack_layout.dart';
 import 'package:myfirstapp/stful_data.dart';
 import 'package:myfirstapp/tabbar.dart';
+import 'package:myfirstapp/tabbar_stfl.dart';
 import 'package:myfirstapp/wrap_data.dart';
 
 void main() {
@@ -33,6 +34,7 @@ void main() {
         '/rtarg':(context) => const RteArg(),
         '/rtrt':(context) => const RteRt(),
         '/tabdata':((context) => const TabData()),
+        '/tbrsw':(context) => TabStfl(),
                
                 
       },));
@@ -66,7 +68,7 @@ class MyApp extends StatelessWidget {
           ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/rtarg');}, child: const Text('RouteArg Screen')),
             ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/rtrt');}, child: const Text('RouteReplacement Screen')),
             ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/tabdata');}, child: const Text('Tabbar Screen')),
-       
+       ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/tbrsw');}, child: const Text('Tabbar SW Screen')),
        ],
     ),)
      );
