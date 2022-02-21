@@ -17,6 +17,7 @@ import 'package:myfirstapp/stack_layout.dart';
 import 'package:myfirstapp/stful_data.dart';
 import 'package:myfirstapp/tabbar.dart';
 import 'package:myfirstapp/tabbar_stfl.dart';
+import 'package:myfirstapp/txt_fld.dart';
 import 'package:myfirstapp/wrap_data.dart';
 
 void main() {
@@ -40,7 +41,9 @@ void main() {
         '/tbrsw':(context) => const TabStfl(),
         '/dwscr':(context) => const DrawData(),
        '/elebtn':(context) => const EleBtn(),      
-         '/ftabtn':(context) => const FtaBtn(),         
+         '/ftabtn':(context) => const FtaBtn(),  
+         '/txtfld':(context) => const TxtFld(),  
+                
       },));
 }
 
@@ -76,6 +79,7 @@ class MyApp extends StatelessWidget {
        ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/dwscr');}, child: const Text('Drawer Screen')),
        ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/elebtn');}, child: const Text('Types of button')),
        ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/ftabtn');}, child: const Text('Floating button')),
+       ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/txtfld');}, child: const Text('Textfield Screen')),
        
        ],
     ),)
