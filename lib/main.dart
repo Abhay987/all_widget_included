@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:myfirstapp/btmnvr_data.dart';
 import 'package:myfirstapp/card_data.dart';
 import 'package:myfirstapp/drawdata.dart';
+import 'package:myfirstapp/eletbtn.dart';
 import 'package:myfirstapp/grid_data.dart';
 import 'package:myfirstapp/img_screen.dart';
 import 'package:myfirstapp/list_data.dart';
@@ -37,7 +38,7 @@ void main() {
         '/tabdata':((context) => const TabData()),
         '/tbrsw':(context) => const TabStfl(),
         '/dwscr':(context) => const DrawData(),
-               
+       '/elebtn':(context) => const EleBtn(),      
                 
       },));
 }
@@ -72,6 +73,8 @@ class MyApp extends StatelessWidget {
             ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/tabdata');}, child: const Text('Tabbar Screen')),
        ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/tbrsw');}, child: const Text('Tabbar SW Screen')),
        ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/dwscr');}, child: const Text('Drawer Screen')),
+       ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/elebtn');}, child: const Text('Types of button')),
+       
        ],
     ),)
      );
