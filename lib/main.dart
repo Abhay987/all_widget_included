@@ -8,6 +8,7 @@ import 'package:myfirstapp/img_screen.dart';
 import 'package:myfirstapp/list_data.dart';
 import 'package:myfirstapp/row_column.dart';
 import 'package:myfirstapp/rte_date.dart';
+import 'package:myfirstapp/rtearg.dart';
 import 'package:myfirstapp/stack_layout.dart';
 import 'package:myfirstapp/stful_data.dart';
 import 'package:myfirstapp/wrap_data.dart';
@@ -27,8 +28,7 @@ void main() {
         '/stfldata':(context) => const StflData(),
         '/btmnvbr':(context) => const BtmNvr(),
         '/rtscr':(context) => const RteData(),
-        
-        
+        '/rtarg':(context) => const RteArg(),        
                 
       },));
 }
@@ -58,6 +58,8 @@ class MyApp extends StatelessWidget {
           ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/stfldata');}, child: const Text('StatefulWidgt Launch')),
           ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/btmnvbr');}, child: const Text('btmnvbr Launch')),
           ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/rtscr');}, child: const Text('Route Screen')),
+          ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/rtarg');}, child: const Text('RouteArg Screen')),
+          
           
        
        ],
