@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:myfirstapp/btmnvr_data.dart';
 import 'package:myfirstapp/card_data.dart';
 import 'package:myfirstapp/drawdata.dart';
+import 'package:myfirstapp/dtme.dart';
 import 'package:myfirstapp/eletbtn.dart';
 import 'package:myfirstapp/fm_cmp.dart';
 import 'package:myfirstapp/fta_btn.dart';
@@ -47,6 +48,7 @@ void main() {
          '/txtfld':(context) => const TxtFld(),  
           '/fmcmp':(context) => const FmData(), 
           '/dldbx':(context) => const DldData(), 
+          '/dttm':(context) => const Dttm(),
           
                 
       },));
@@ -114,6 +116,8 @@ class MyApp extends StatelessWidget {
                        child: ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/fmcmp');}, child: const Text('Form Screen')))),
                         Center(child: Container(margin: const EdgeInsets.only(bottom: 30),
                        child: ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/dldbx');}, child: const Text('Dialog Screen')))),
+                       Center(child: Container(margin: const EdgeInsets.only(bottom: 30),
+                       child: ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/dttm');}, child: const Text('Date & Time')))),
 
 
 
