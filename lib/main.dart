@@ -16,6 +16,7 @@ import 'package:myfirstapp/rtearg.dart';
 import 'package:myfirstapp/rtert.dart';
 import 'package:myfirstapp/stack_layout.dart';
 import 'package:myfirstapp/stful_data.dart';
+import 'package:myfirstapp/swdlg.dart';
 import 'package:myfirstapp/tabbar.dart';
 import 'package:myfirstapp/tabbar_stfl.dart';
 import 'package:myfirstapp/txt_fld.dart';
@@ -45,6 +46,8 @@ void main() {
          '/ftabtn':(context) => const FtaBtn(),  
          '/txtfld':(context) => const TxtFld(),  
           '/fmcmp':(context) => const FmData(), 
+          '/dldbx':(context) => const DldData(), 
+          
                 
       },));
 }
@@ -109,7 +112,8 @@ class MyApp extends StatelessWidget {
                        child: ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/txtfld');}, child: const Text('Textfield Screen')))),
                        Center(child: Container(margin: const EdgeInsets.only(bottom: 30),
                        child: ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/fmcmp');}, child: const Text('Form Screen')))),
-
+                        Center(child: Container(margin: const EdgeInsets.only(bottom: 30),
+                       child: ElevatedButton(onPressed: (){ Navigator.pushNamed(context, '/dldbx');}, child: const Text('Dialog Screen')))),
 
 
 
